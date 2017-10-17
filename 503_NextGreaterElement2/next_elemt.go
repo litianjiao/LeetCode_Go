@@ -1,6 +1,6 @@
 package NextGreaterElement2
 
-//解法1:
+//解法1:时间复杂度O(N^2)
 //func NextGreaterElements(nums []int) []int {
 //	lens := len(nums)
 //	var array1 []int
@@ -18,13 +18,15 @@ package NextGreaterElement2
 //	return array1
 //}
 
-//解法2：
+//解法2：stack 时间复杂度O（N）
+//构建一个堆栈来保持一个递减的序列索引，每当我们看到一个x大于stack的数字x时，我们弹出所有小于x的元素，对于所有弹出的元素，它们的下一个更大的元素是x
 func NextGreaterElements(nums []int) (res []int) {
-	stack := make([]int, 0, len(nums))
+	stack := make([]int, 0, len(nums)) //len0 capacity nums.  stack用于计下标
 	res = make([]int, len(nums))
 	var lastMin int
 	for i, n := range nums {
 		if i == 0 || n <= lastMin {
+
 			stack = append(stack, i)
 			lastMin = n
 		} else {
