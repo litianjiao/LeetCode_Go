@@ -1,5 +1,5 @@
 package two_sum
-
+//HASH map solution
 func twoSum(nums []int, target int) []int {
 	// m := make(map[int]int)
 	// for i := 0; i < len(nums); i++ {
@@ -10,7 +10,7 @@ func twoSum(nums []int, target int) []int {
 	// 	m[nums[i]] = i //1.通过将键值与序号对应
 	// }
 	// return nil
-
+//核心步骤是在hashmap中找target-num 是否存在而且这个num不在其本身
 	list := make(map[int]int, len(nums))
 	for index, num := range nums {
 		if index_2, isComplex := list[target-num]; isComplex && index != index_2 {
