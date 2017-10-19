@@ -1,4 +1,4 @@
-package pali_num
+package lc_0009
 
 import (
 	"strconv"
@@ -34,7 +34,7 @@ func AisPalindrome(x int) bool {
 
 /*
 ******************************************************************
-  * @brief     回文 数字解法  这才是原命题想要的
+  * @brief     如果回文是纯数字解法  非常math
   * @param
   * @ret
   * @author    TRoy

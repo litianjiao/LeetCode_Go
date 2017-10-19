@@ -1,4 +1,4 @@
-package int2roman
+package lc_0012
 
 import "testing"
 

@@ -1,11 +1,11 @@
-package balance_tree
+package lc_0110
 
 type TreeNode struct {
 	Val   int
 	Left  *TreeNode
 	Right *TreeNode
 }
-
+//DP解
 func balance(root *TreeNode) (int, bool) {
 
 	if root == nil {

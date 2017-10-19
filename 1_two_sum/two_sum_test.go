@@ -1,4 +1,4 @@
-package two_sum
+package lc_0001
 
 import (
 	"testing"

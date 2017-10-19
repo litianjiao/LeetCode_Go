@@ -1,4 +1,4 @@
-package NextGreaterElement2
+package lc_0503
 
 import "testing"
 

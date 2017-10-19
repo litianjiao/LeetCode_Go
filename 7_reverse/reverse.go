@@ -1,4 +1,4 @@
-package reverse
+package lc_0007
 
 import "math"
 

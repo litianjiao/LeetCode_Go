@@ -1,4 +1,4 @@
-package longest_com_pre
+package lc_0014
 
 import "testing"
 

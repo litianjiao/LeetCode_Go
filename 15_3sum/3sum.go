@@ -1,4 +1,4 @@
-package threesum
+package lc_0015
 
 import "sort"
 
@@ -38,6 +38,7 @@ func threeSum1(nums []int) (sums [][]int) {
 }
 
 //解法1 优化版  beats 100% golang =.=
+//单元素遍历，双指针缩进
 func threeSum(nums []int) (sums [][]int) {
 	sort.Ints(nums)
 	l := len(nums)

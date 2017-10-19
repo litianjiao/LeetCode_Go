@@ -1,4 +1,4 @@
-package lc_0005
+package lc_0003
 
 import (
 	"testing"
@@ -11,7 +11,7 @@ type para struct {
 }
 
 type ans struct {
-	one string
+	one int
 }
 
 type question struct {
@@ -25,40 +25,32 @@ func Test_OK(t *testing.T) {
 	qs := []question{
 		question{
 			p: para{
-				one: "babad",
+				one: "abcabcbb",
 			},
 			a: ans{
-				one: "bab",
+				one: 3,
 			},
 		},
 		question{
 			p: para{
-				one: "cbbd",
+				one: "bbbbbbbb",
 			},
 			a: ans{
-				one: "bb",
+				one: 1,
 			},
 		},
 		question{
 			p: para{
-				one: "abbcccddcccbba",
+				one: "pwwkew",
 			},
 			a: ans{
-				one: "abbcccddcccbba",
-			},
-		},
-		question{
-			p: para{
-				one: "a",
-			},
-			a: ans{
-				one: "a",
+				one: 3,
 			},
 		},
 	}
 
 	for _, q := range qs {
 		a, p := q.a, q.p
-		ast.Equal(a.one, longestPalindrome(p.one), "输入:%v", p)
+		ast.Equal(a.one, lengthOfLongestSubstring(p.one), "输入:%v", p)
 	}
 }

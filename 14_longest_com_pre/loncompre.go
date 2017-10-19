@@ -1,8 +1,8 @@
-package longest_com_pre
+package lc_0014
 
 import "strings"
 
-//最长公共前缀
+//最长公共前缀 用指针解
 func LongestCommonPrefix(strs []string) string {
 	//size表示有几个字符串需要找最长公共前缀
 	size := len(strs)

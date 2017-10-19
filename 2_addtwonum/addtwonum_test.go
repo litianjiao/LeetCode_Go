@@ -1,4 +1,4 @@
-package addtwonum
+package lc_0002
 
 import (
 	"testing"

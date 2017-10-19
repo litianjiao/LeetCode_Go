@@ -1,4 +1,4 @@
-package atoi
+package lc_0008
 
 import "testing"
 

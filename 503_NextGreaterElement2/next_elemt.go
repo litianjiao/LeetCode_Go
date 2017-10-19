@@ -1,4 +1,4 @@
-package NextGreaterElement2
+package lc_0503
 
 //解法1:时间复杂度O(N^2)
 //func NextGreaterElements(nums []int) []int {

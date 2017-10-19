@@ -1,5 +1,5 @@
-package longpalisub
-
+package lc_0005
+//解法 双指针扫描
 func longestPalindrome(s string) string {
    //肯定是回文
 	if len(s) == 0 {

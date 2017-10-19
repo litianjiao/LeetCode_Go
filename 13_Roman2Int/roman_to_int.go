@@ -1,5 +1,13 @@
-package roman2int
-
+package lc_0013
+/*
+******************************************************************
+  * @brief  用HashMap解
+  * @param
+  * @ret
+  * @author    Troy
+  * @date      2017/10/19 23:15
+******************************************************************
+*/
 func RomanToInt(s string) int {
 	//查表法
 	var ret int
