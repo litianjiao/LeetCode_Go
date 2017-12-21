@@ -1,7 +1,7 @@
 package lc0083
 
 type ListNode struct {
-	val  int
+	Val  int
 	Next *ListNode
 }
 
@@ -12,7 +12,7 @@ func deleteDuplicates(head *ListNode) *ListNode {
 	}
 	pre, current := head, head
 	for current != nil {
-		for current.Next != nil && current.val == current.Next.val {
+		for current.Next != nil && current.Val == current.Next.Val {
 			current = current.Next
 		}
 		pre.Next = current.Next
