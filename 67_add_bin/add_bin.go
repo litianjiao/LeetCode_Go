@@ -11,6 +11,7 @@ func addBinary(a string, b string) string {
 	return binToStr(add(binA, binB))
 }
 
+//转换成二进制并翻转每位的顺序
 func trans(s string, lens int) []int {
 	res := make([]int, lens)
 	ls := len(s)
@@ -29,7 +30,7 @@ func add(a, b []int) []int {
 		res[i-1] = temp / 2
 	}
 	i := 0
-
+	//还原顺序
 	for i < lens-1 && res[i] == 0 {
 		i++
 	}
