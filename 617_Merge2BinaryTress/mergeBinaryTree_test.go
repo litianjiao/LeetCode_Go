@@ -1,8 +1,8 @@
 package lc0617
 
 import (
+	"LeetCode_Go/uils"
 	"fmt"
-	"github.com/litianjiao/LeetCode_Go/utils"
 	"github.com/stretchr/testify/assert"
 	"testing"
 )
