@@ -1,9 +1,21 @@
 package lc0121
 
+//通过每个节点之间的差值来看盈亏，步步都更赚
+
 func maxProfit(prices []int) int {
-    return 0
+	lenA := len(prices)
+	var ret, maxCurrent int
+	for i := 1; i < lenA; i++ {
+		maxCurrent += prices[i] - prices[i-1]
+		maxCurrent = max(0, maxCurrent)
+		ret = max(ret, maxCurrent)
+	}
+	return ret
 }
 
-func getTime(price1,price2 int)int{
-   
+func max(a, b int) int {
+	if a > b {
+		return a
+	}
+	return b
 }
