@@ -1,36 +1,40 @@
 package lc0155
 
 type MinStack struct {
-	unit []int
+	stack []unit
+}
+
+type unit struct {
+	val, min int
 }
 
 /** initialize your data structure here. */
 func Constructor() MinStack {
-	return MinStack{unit: []int{}}
+	return MinStack{}
 
 }
 
 func (this *MinStack) Push(x int) {
-	this.unit = append(this.unit, x)
+	min := x
+	if len(this.stack) > 0 && x > this.GetMin() {
+		min = this.GetMin()
+	}
+	this.stack = append(this.stack, unit{val: x, min: min})
 }
 
 func (this *MinStack) Pop() {
-	//	res := this.unit[len(this.unit)-1]
-	this.unit = this.unit[:len(this.unit)-1]
+
+	this.stack = this.stack[:len(this.stack)-1]
 }
 
+// 获取栈顶元素
 func (this *MinStack) Top() int {
-	return this.unit[0]
+	return this.stack[len(this.stack)-1].val
 }
 
 func (this *MinStack) GetMin() int {
 
-	for i, _ := range this.unit {
-		if this.unit[i] > this.unit[i+1] {
-			this.Pop()
-		}
-	}
-	return this.unit[0]
+	return this.stack[len(this.stack)-1].min
 }
 
 /**
