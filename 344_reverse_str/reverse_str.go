@@ -12,7 +12,7 @@ func reverseString2(s string) string {
 	return result
 }
 
-//优化写法
+//优化写法 先强制类型转换为byte 再通过数组索引直接交换
 func reverseString(s string) string {
 	bytes := []byte(s)
 	for i, j := 0, len(bytes)-1; i < j; i, j = i+1, j-1 {
