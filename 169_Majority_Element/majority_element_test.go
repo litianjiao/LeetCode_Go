@@ -21,7 +21,7 @@ type ans struct {
 	one int
 }
 
-func Test_Problem0169(t *testing.T) {
+func Test_majorityElement(t *testing.T) {
 	ast := assert.New(t)
 
 	qs := []question{
